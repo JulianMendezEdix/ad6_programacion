@@ -41,8 +41,9 @@ public class Administrativo extends Persona {
 
 	@Override
 	public String toString() {
-		return "Administrativo [nif=" + nif + ", nombre=" + nombre + ", direccion=" + 
-				direccion + ", telefono=" + telefono + ", tareas=" + tareas + "]";
+		return "Administrativo [getNif()=" + getNif() + ", getNombre()=" + getNombre() +
+				", getDireccion()=" + getDireccion() + ", getTelefono()=" + getTelefono() +
+				", tareas=" + tareas + "]";
 	}
 	
 	// MÉTODO trabajar() heredado redefinido
@@ -57,7 +58,7 @@ public class Administrativo extends Persona {
 	 */
 	@Override
 	public String trabajar() {
-		return ("El administrativo " + nombre + " va a realizar estas tareas: " + tareas);
+		return ("El administrativo " + getNombre() + " va a realizar estas tareas: " + tareas);
 	}
 	
 	/**
@@ -67,24 +68,7 @@ public class Administrativo extends Persona {
 	 * @return String "El administrativo X va a gestionar...""
 	 */
 	public String gestionarMatricula() {
-		return ("El administrativo " + nombre + " va a gestionar una matrícula");
+		return ("El administrativo " + getNombre() + " va a gestionar una matrícula");
 	};
 	
-
-	
-	
-	
-
-	
-	
-
-	
-	
-	
-	
-
-	
-	
-		
-
 }

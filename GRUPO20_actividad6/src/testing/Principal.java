@@ -1,6 +1,17 @@
 package testing;
 import modelo.javabean.*;
 
+/**
+ * 
+ * Esta es la clase testing 'Principal', de la
+ * actividad 6 de programacion DAW EDIX23.          
+ * 
+ * En ella probamos la funcionalidad de los
+ * métodos creados en los javabeans.
+ * 
+ * @author JulianMendezEdix
+ * @version 1.0
+ */
 public class Principal {
 	
 	public static void main(String[] args) {
@@ -12,7 +23,7 @@ public class Principal {
 		Alumno alu = new Alumno("22222222B", "Don Quijote", "Calle Luna", "543543543", 
 				"1º ESO");
 		Administrativo adm = new Administrativo("33333333B", "Luis Moya", "Calle Mar", 
-				"654323232", "facturar");
+				"654323232", "facturar, hacer café");
 		
 		// Ejecuta el método toString() sobre cada uno de ellos.
 		

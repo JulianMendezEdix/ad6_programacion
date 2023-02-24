@@ -39,10 +39,11 @@ public class Alumno extends Persona {
 	
 	@Override
 	public String toString() {
-		return "Alumno [nif=" + nif + ", nombre=" + nombre + ", direccion=" + direccion +
-				", telefono=" + telefono + ", curso=" + curso + "]";
+		return "Alumno [getNif()=" + getNif() + ", getNombre()=" + getNombre() + 
+				", getDireccion()=" + getDireccion() + ", getTelefono()=" + getTelefono() + 
+				", curso=" + curso + "]";
 	}
-	
+
 	// MÉTODO trabajar() redefinido
 
 	/**
@@ -55,7 +56,7 @@ public class Alumno extends Persona {
 	 */
 	@Override
 	public String trabajar() {
-		return ("El alumno " + this.nombre + " va a estudiar para el curso " + this.curso  );
+		return ("El alumno " + getNombre() + " va a estudiar para el curso " + curso  );
 	}
 	
 	// MÉTODOS
@@ -67,7 +68,7 @@ public class Alumno extends Persona {
 	 * @return String "El alumno X va a hacer su examen"
 	 */
 	public String hacerExamen () {
-		return ("El alumno " + this.nombre + " va a hacer su examen");
+		return ("El alumno " + getNombre() + " va a hacer su examen");
 	};
 	
 

@@ -22,7 +22,8 @@ public class  Profesor extends Persona {
 		super();
 	}
 
-	public Profesor(String nif, String nombre, String direccion, String telefono, String competencias) {
+	public Profesor(String nif, String nombre, String direccion, String telefono, 
+			String competencias) {
 		super(nif, nombre, direccion, telefono);
 		this.competencias = competencias;
 	}
@@ -41,11 +42,13 @@ public class  Profesor extends Persona {
 	
 	@Override
 	public String toString() {
-		return "Profesor [nif=" + nif + ", nombre=" + nombre + ", direccion=" + direccion + ", telefono=" + telefono
-				+ ", competencias=" + competencias + "]";
+		return "Profesor [getNif()=" + getNif() + ", getNombre()=" + getNombre() + 
+				", getDireccion()=" + getDireccion() + ", getTelefono()=" + getTelefono() + 
+				", competencias=" + competencias + "]";
 	}
 
 	// MÉTODO trabajar() refdefinido
+	
 	/**
 	 * Método heredado de la clase abstracta 'Persona'<br>
 	 * que devuelve un String con la información de que <br> 
@@ -56,11 +59,11 @@ public class  Profesor extends Persona {
 	 */
 	@Override
 	public String trabajar() {
-		return ("El profesor " + this.nombre + " va a impartir su clase");
+		return ("El profesor " + getNombre() + " va a impartir su clase");
 	}
 	
 	// MÉTODOS
-	
+
 	/**
 	 * El método devuelve un String con la información<br>
 	 * de que X profesor va a corregir los exámenes.
@@ -68,7 +71,7 @@ public class  Profesor extends Persona {
 	 * @return String "El profesor X va a corregir los exámenes".
 	 */
 	public String ponerNotas () {
-		return ("El profesor " + this.nombre + " va a corregir los exámenes");
+		return ("El profesor " + getNombre() + " va a corregir los exámenes");
 	};
 	
 }

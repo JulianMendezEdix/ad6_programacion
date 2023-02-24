@@ -12,7 +12,7 @@ public abstract class Persona {
 	
 	// ATRIBUTOS
 	
-	protected String nif, nombre, direccion, telefono;
+	private String nif, nombre, direccion, telefono;
 
 	// MÉTODOS CONSTRUCTORES
 	
@@ -60,14 +60,6 @@ public abstract class Persona {
 
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
-	}
-
-	// MÉTODO toString() redefinido.
-	
-	@Override
-	public String toString() {
-		return "Persona [nif=" + nif + ", nombre=" + nombre + ", direccion=" + direccion + 
-					", telefono=" + telefono + "]";
 	}
 	
 	//MÉTODOS
