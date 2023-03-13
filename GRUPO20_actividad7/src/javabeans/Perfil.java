@@ -1,52 +1,55 @@
 package javabeans;
 
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 //DEFINICIÓN DE CLASE
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
 * 
-* Esta es la clase 'Departamento',
+* Esta es la clase 'Perfil',
 * requerida en la actividad 7 de programacion DAW EDIX23.                                       
 * 
 * @author JulianMendezEdix
 * @version 1.0
 * 
 */
-public class Departamento {
+public class Perfil {
 	
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// ATRIBUTOS PRIVADOS
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
-	private int idDepar;
-	private String nombre, direccion;
-	public Departamento() {
-		super();
-	}
+	private int idPerfil;
+	private String nombre;
+	private double precioHora;
 	
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// MÉTODOS CONSTRUCTORES
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
-	public Departamento(int idDepar, String nombre, String direccion) {
+	public Perfil() {
 		super();
-		this.idDepar = idDepar;
-		this.nombre = nombre;
-		this.direccion = direccion;
 	}
 
-	
+	public Perfil(int idPerfil, String nombre, double precioHora) {
+		super();
+		this.idPerfil = idPerfil;
+		this.nombre = nombre;
+		this.precioHora = precioHora;
+	}
+
+
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// GETTERS AND SETTERS
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////	
 	
-	public int getIdDepar() {
-		return idDepar;
+	public int getIdPerfil() {
+		return idPerfil;
 	}
 
-	public void setIdDepar(int idDepar) {
-		this.idDepar = idDepar;
+	public void setIdPerfil(int idPerfil) {
+		this.idPerfil = idPerfil;
 	}
 
 	public String getNombre() {
@@ -56,25 +59,28 @@ public class Departamento {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-
-	public String getDireccion() {
-		return direccion;
+	
+	public double getPrecioHora() {
+		return precioHora;
 	}
 
-	public void setDireccion(String direccion) {
-		this.direccion = direccion;
+	public void setPrecioHora(double precioHora) {
+		this.precioHora = precioHora;
 	}
 	
+	
+
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// REDEFINIR EQUALS Y HASHCODE
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////	
+
+
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((direccion == null) ? 0 : direccion.hashCode());
-		result = prime * result + idDepar;
+		result = prime * result + idPerfil;
 		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
 		return result;
 	}
@@ -83,15 +89,10 @@ public class Departamento {
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
-		if (!(obj instanceof Departamento))
+		if (!(obj instanceof Perfil))
 			return false;
-		Departamento other = (Departamento) obj;
-		if (direccion == null) {
-			if (other.direccion != null)
-				return false;
-		} else if (!direccion.equals(other.direccion))
-			return false;
-		if (idDepar != other.idDepar)
+		Perfil other = (Perfil) obj;
+		if (idPerfil != other.idPerfil)
 			return false;
 		if (nombre == null) {
 			if (other.nombre != null)
@@ -105,25 +106,15 @@ public class Departamento {
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// REDEFINIR TOSTRING
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////	
-	
 
 	@Override
 	public String toString() {
-		return "Departamento [idDepar=" + idDepar + ", nombre=" + nombre + ", direccion=" +
-				direccion + "]";
+		return "Perfil [idPerfil=" + idPerfil + ", nombre=" + nombre + "]";
 	}
 	
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 //FIN DE CLASE
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-	
-	
-
-	
-
-
-	
-	
 
 
 }
